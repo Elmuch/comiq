@@ -33,7 +33,7 @@ section#main {
 
 .logo {
   margin: 10px;
-  background: url(../img/logo.png);
+  background: url(img/logo.png);
   height: 80px;
   background-position: center center;
   background-size: contain;

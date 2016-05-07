@@ -23,21 +23,35 @@ router.post('/', function(req, res) {
 
   img_url = img_dir + 'test.jpg';
   console.log(img_url);
-var api_url =  'https://api.clarifai.com/v1/tag/?access_token='+ token +'&url="https://samples.clarifai.com/metro-north.jpg"';
+  var api_url =  'https://api.clarifai.com/v1/tag/'
 
 
-  request.get(api_url, function(err, res, body){
-    console.log("Clarifai ==>", err)
-    console.log(body);
-  })
+ /* request.get(api_url, function(err, response, body){
+    console.log("Clarifai ==>", body)
+    res.json({tags: JSON.parse(body).results});
+  }) */
 
-  var tags = Clarifai.tagURL(remote_url, null, function(err, tagRes){
+  request({
+      url: api_url,
+      method: 'POST',
+      form: {
+        url: remote_url,
+        access_token: token
+      }
+    },
+    function(err, response, body){
+      console.log("Clarifai ==>", body)
+    res.json({tags: JSON.parse(body).results});
+  });
+
+
+ /* var tags = Clarifai.tagURL(remote_url, null, function(err, tagRes){
   if(tagRes){
     res.json({tags: tagRes.results});
   }else{
     res.json("no tags");
   }
-});
+}); */
 
 });
 
