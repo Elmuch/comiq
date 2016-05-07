@@ -96,7 +96,7 @@
         $("#" + this.id).addClass('selected');
         var still = document.getElementById(this.id);
         var canvas = still.children[0];
-        document.getElementById('preview-container').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
+        document.getElementById('frame').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
 
         var el       = document.createElement('div');
         el.className = "still";
@@ -138,7 +138,7 @@
       canvas.width  = width;
       canvas.height = height;
       ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-      document.getElementById('preview-container').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
+      document.getElementById('frame').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
     }
   }
 })(jQuery)
