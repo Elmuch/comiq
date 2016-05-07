@@ -29,12 +29,32 @@
 </section>
 
 <section id='editor'>
-  <div id="video-container">
-    <div id="ziggeo-player"></div>
-    <button id="set-style">Set Style</button>
-    <div id="output"></div>
-  </div>
-  <div id="preview-container">
-</section>
+  <div class='input'>
+    <div id="video-container">
+      <div id="ziggeo-player"></div>
+      <button id="set-style">Set Style</button>
+      <div id="output"></div>
+    </div>
+    <div class='quote_editor'>
+      <div id='frame'>
+        <span id='quote'></span>
+      </div>
+      <div class='quote_selector'>
+      <fieldset>
+        <legend><strong>Select a Quote</strong></legend>
+        <div><input type='radio' name='quote' value='custom'/> <input type='text' id='custom_quote' /></div>
+        <div><input type='radio' name='quote' value='Bla bla bla bla bla' checked/> <span>Bla bla bla bla bla</span></div>
+      </fieldset>
+      <fieldset>
+        <div>Color: <input type='color' id='text_color' /></div>
+        <button id="add_quote">Add Quote</button>
+      </fieldset>
+      </div>
+      OUTPUT:
+      <canvas id='output-canvas'></canvas>
+    </div>
+    <div id='share'>
+    </div>
+  </section>
 <footer>
 </footer>
