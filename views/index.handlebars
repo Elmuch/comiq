@@ -1,8 +1,47 @@
-<div class="ziggeo-record">
-  <ziggeo ziggeo-limit=15
-          ziggeo-width=320
-          ziggeo-height=240>
-  </ziggeo>
-</div>
-<div id="ziggeo-player"></div>
-<div class="player"></div>
+    <header>
+      <div class='logo'></div>
+      <span><em>Turn your videos into comic strips and share with your friends.</em></span>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li class='donate'><a href='#'>Donate</a></li>
+        <li><a href='#'>Contact</a></li>
+        <li class='donate'><a href='#'>Donate</a></li>
+        <li class='donate'><a href='#'>Want to Donate?</a></li>
+      </ul>
+    </nav>
+    <section id='main'>
+      <h1>Record/Upload a Video</h1>
+      <div class='record'>
+        <div class="ziggeo-record">
+          <ziggeo ziggeo-limit=15
+              ziggeo-width=600
+              ziggeo-height=360>
+          </ziggeo>
+        </div>
+      <div id="ziggeo-player"></div>
+      </div>
+      <h3>or paste a video url</h3>
+      <div>
+        <input type='url' id='video_url' placeholder="http://" />
+      </div>
+      <button>Take me to what matters!</button>
+    </section>
+    <section id='editor'>
+      <div class='input'>
+        <div class='player'>
+          <div class="player"></div>  
+        </div>
+        <div class='timeline'>
+        </div>
+        <div class='stills'>
+        </div>
+      </div>
+      <div class='still'>
+      </div>
+      <div id='share'>
+      </div>
+    </section>
+    <footer>
+    </footer>
