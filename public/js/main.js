@@ -14,6 +14,7 @@
     '</video>');
 
     $('#ziggeo-player').html($vidTag);
+    $vidTag[0].load();
     return $vidTag;
   }
 
@@ -43,9 +44,9 @@
 
     function initialize () {
       initialized = 1;
-
       var still_count = 4;
       var width       = 400;
+      set_button.show();
 
       for ( var i = 0; i < still_count; i++ ) {
         var id = "still-" + (i + 1);
@@ -67,12 +68,35 @@
       this.id    = opts.id;
     }
 
+
     Still.prototype = {
       setStill: function() {
         var output = document.getElementById('output');
 
         var width  = 98;
         var height = 54.25;
+        
+        var el       = document.createElement('div');
+        el.className = "still";
+        el.id        = "still-" + this.index;
+        
+        var canvas       = document.createElement('canvas');
+        canvas.className = "canvas";
+        canvas.id        = "canvas-" + this.index;
+        
+        el.appendChild(canvas);
+        output.appendChild(el);
+
+        $(el).click(function(e){
+          moments[this.id].updateSelected();
+        });
+      },
+      updateSelected: function(){
+        $(".still").removeClass('selected');
+        $("#" + this.id).addClass('selected');
+        var still = document.getElementById(this.id);
+        var canvas = still.children[0];
+        document.getElementById('preview-container').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
 
         var el       = document.createElement('div');
         el.className = "still";
@@ -96,7 +120,6 @@
 
     function setCanvas(){
       var el = document.getElementsByClassName('selected')[0];
-
       var fc = el.firstChild;
 
       while( fc ) {
@@ -115,7 +138,7 @@
       canvas.width  = width;
       canvas.height = height;
       ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      document.getElementById('preview-container').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
     }
   }
 })(jQuery)
-

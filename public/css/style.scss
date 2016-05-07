@@ -40,7 +40,6 @@ section#main {
   background-repeat: no-repeat; }
 
 section#editor {
-  background: blue;
   height: 200px; }
 
 .ziggeo-record {
@@ -66,12 +65,15 @@ h1, h3 {
   border-radius: 5px; }
 
 #video-container {
-  width: 470px; }
+  width: 400px;
+  display: inline-block;
+}
 
 #video-preview {
   width: 400px;
   height: 225px;
-  border: none; }
+  border: none;
+}
 
 #output {
   width: 400px;
@@ -94,7 +96,13 @@ h1, h3 {
   height: 54.25px; }
 
 .selected {
-  box-shadow: 0 0 5px rgba(81,203,238,1);
-  border: 0 0 5px rgba(81,203,238,1);
-  background-color: red !important;
+  box-shadow: 0 0 5px #51cbee;
+  border: 0 0 5px #51cbee;
+  background-color: red !important; }
+#preview-container {
+  width: 400px;
+  display: inline-block;
+  background-color: gray;
+  height: 225px;
+  vertical-align: top;
 }
