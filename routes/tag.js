@@ -35,13 +35,17 @@ router.post('/', function(req, res) {
       url: api_url,
       method: 'POST',
       form: {
-        url: remote_url,
+        url: "https://baa449d7.ngrok.io/img/test.jpg",
         access_token: token
       }
     },
     function(err, response, body){
-      console.log("Clarifai ==>", body)
-    res.json({tags: JSON.parse(body).results});
+      console.log(body)
+      if(body){
+        res.json({tags: JSON.parse(body).results});
+      }else{
+        res.json('No tags');
+      }
   });
 
 
