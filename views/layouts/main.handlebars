@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <title>{{title }}</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//assets-cdn.ziggeo.com/v1-stable/ziggeo.css" />
   {{#if ENV_DEVELOPMENT}}
     <script src="http://localhost:35729/livereload.js"></script>
   {{/if}}
@@ -16,4 +17,9 @@
 
 
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="//assets-cdn.ziggeo.com/v1-stable/ziggeo.js"></script>
+  <script>ZiggeoApi.token = "3801c65b628ceb68f8ffc1c72d04199d";</script>
+
+  <script src="/js/main.js"></script>
 </html>
