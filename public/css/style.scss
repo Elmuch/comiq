@@ -48,3 +48,41 @@ h1, h3 {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+#video-container {
+  width: 470px
+}
+#video-preview {
+  width: 400px;
+  height: 225px;
+  border: none;
+}
+
+#output {
+  width: 400px;
+  min-height: 56.25px;
+  background-color: transparent;
+}
+
+.still {
+  width: 98px;
+  height: 54.25px;
+  display: inline-block;
+  border: 1px solid #444;
+  background-color: #aaa;
+}
+
+.still:nth-child(even) {
+  border: 1px solid #fff;
+  background-color: #333;
+}
+
+.canvas {
+  width: 98px;
+  height: 54.25px;
+}
+
+.selected {
+  box-shadow: 0 0 5px rgba(81,203,238,1);
+  border: 0 0 5px rgba(81,203,238,1);
+  background-color: red !important;
+}

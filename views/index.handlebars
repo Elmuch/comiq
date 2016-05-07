@@ -38,11 +38,18 @@
       <button>Take me to what matters!</button>
     </section>
     <section id='editor'>
-      <div class='input'>
+      <div id="video-container">
+        <video id="video-preview" controls>  
+          <source src="big_buck_bunny.mp4">
+        </video>
+        <button id="set-style">Set Style</button>
+        <div id="output">
+        </div>
+      </div>
+
+      <!-- <div class='input'>
         <div class='player'>
           <div class="player"></div>  
-        </div>
-        <div class='timeline'>
         </div>
         <div class='stills'>
         </div>
@@ -50,7 +57,12 @@
       <div class='still'>
       </div>
       <div id='share'>
-      </div>
+      </div> -->
     </section>
     <footer>
     </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="//assets-cdn.ziggeo.com/v1-stable/ziggeo.js"></script>
+  <script>ZiggeoApi.token = "3801c65b628ceb68f8ffc1c72d04199d";</script>
+
+  <script src="/js/main.js"></script>
