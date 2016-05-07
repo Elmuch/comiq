@@ -80,6 +80,7 @@ Still.prototype = {
     
     var canvas       = document.createElement('canvas');
     canvas.className = "canvas";
+    canvas.id        = "canvas-" + this.index;
     
     el.appendChild(canvas);
     output.appendChild(el);
@@ -91,6 +92,10 @@ Still.prototype = {
   updateSelected: function(){
     $(".still").removeClass('selected');
     $("#" + this.id).addClass('selected');
+    var still = document.getElementById(this.id);
+    var canvas = still.children[0];
+    document.getElementById('preview-container').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
+
   }
 }
 
@@ -107,12 +112,13 @@ function setCanvas(){
   var width  = 98;
   var height = 54.25;
 
-  var canvas       = document.createElement('canvas');
-  
+  var canvas = document.createElement('canvas');
   el.appendChild(canvas);
 
   var ctx       = canvas.getContext("2d");
   canvas.width  = width;
   canvas.height = height;
-  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  ctx.drawImage(video, 0, 0, 400, 160);
+
+  document.getElementById('preview-container').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
 }
