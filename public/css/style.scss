@@ -1,88 +1,99 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-header { text-align: center }
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+header {
+  text-align: center; }
+
 nav {
   text-align: center;
   border-bottom: 1px solid #eee;
-  height: 30px;
-}
-header em { opacity: .4 }
+  height: 30px; }
+
+header em {
+  opacity: .4; }
+
 nav li {
   list-style: none;
   display: inline-block;
   min-width: 100px;
   padding: 5px;
-  border-bottom: 3px solid #eee;
-}
-nav li:hover { border-bottom: 3px solid red; cursor: pointer;}
-section ~ div { border: 1px solid; }
-section#main { text-align: center }
+  border-bottom: 3px solid #eee; }
+
+nav li:hover {
+  border-bottom: 3px solid red;
+  cursor: pointer; }
+
+section ~ div {
+  border: 1px solid; }
+
+section#main {
+  text-align: center; }
+
 .logo {
   margin: 10px;
-  background: url(img/logo.png);
+  background: url(../img/logo.png);
   height: 80px;
   background-position: center center;
   background-size: contain;
-  background-repeat: no-repeat;
-}
-section#editor { background: blue; height: 200px;}
-.ziggeo-record { margin: 0 auto; width: 600px; }
+  background-repeat: no-repeat; }
+
+section#editor {
+  background: blue;
+  height: 200px; }
+
+.ziggeo-record {
+  margin: 0 auto;
+  width: 600px; }
+
 button {
   background: red;
   color: white;
   border: 1px solid darkred;
   font-size: 16px;
   margin-top: 15px;
-  padding: 10px
-}
+  padding: 10px; }
+
 h1, h3 {
-  margin: 15px 0 8px 0;
-}
+  margin: 15px 0 8px 0; }
+
 #video_url {
   padding: 5px;
   font-size: 16px;
   width: 600px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  border-radius: 5px; }
+
 #video-container {
-  width: 470px
-}
+  width: 470px; }
+
 #video-preview {
   width: 400px;
   height: 225px;
-  border: none;
-}
+  border: none; }
 
 #output {
   width: 400px;
   min-height: 56.25px;
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 .still {
   width: 98px;
   height: 54.25px;
   display: inline-block;
   border: 1px solid #444;
-  background-color: #aaa;
-}
+  background-color: #aaa; }
 
 .still:nth-child(even) {
   border: 1px solid #fff;
-  background-color: #333;
-}
+  background-color: #333; }
 
 .canvas {
   width: 98px;
-  height: 54.25px;
-}
+  height: 54.25px; }
 
 .selected {
-  box-shadow: 0 0 5px rgba(81,203,238,1);
-  border: 0 0 5px rgba(81,203,238,1);
-  background-color: red !important;
-}
+  box-shadow: 0 0 5px #51cbee;
+  border: 0 0 5px #51cbee;
+  background-color: red !important; }
