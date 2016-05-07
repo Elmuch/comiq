@@ -130,7 +130,7 @@
       var width  = 98;
       var height = 54.25;
 
-      var canvas       = document.createElement('canvas');
+      var canvas = document.createElement('canvas');
 
       el.appendChild(canvas);
 
@@ -141,4 +141,17 @@
       document.getElementById('frame').style.backgroundImage = "url(" + canvas.toDataURL("image/png")+ ")";
     }
   }
+
+  $("#go_to_editor").click(function(){
+    $("#main").hide();
+    $("#editor").show();
+  });
+  $("#add_quote").click(function(){
+    var quote = $("input[name=quote]:checked").val();
+    if ( quote === "custom" ) quote = $("#custom_quote").val();
+    $("#quote").text( quote );
+    $("#quote").css("color", $("#text_color") );
+    rasterizeHTML.drawHTML( $("#frame").prop('outerHTML'), $("#output-canvas")[0] );
+  });
+
 })(jQuery)
