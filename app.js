@@ -9,13 +9,14 @@ var bodyParser = require('body-parser');
 var exphbs  = require('express-handlebars');
 
 var routes = require('./routes/index');
-var users = require('./routes/user');
+var tags = require('./routes/tag');
 
 var app = express();
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env == 'development';
+app.locals.baseDir = __dirname
 
 // view engine setup
 
@@ -33,11 +34,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/tags', tags);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
